@@ -1,8 +1,8 @@
 class InputManager{
-    observer = [];
+    observers = [];
 
     subscribe(fn) {
-        this.observer.push(fn);
+        this.observers.push(fn);
     }
 
     unsubscribe(fn) {
