@@ -7,9 +7,10 @@ class World {
         this.tilesize=tilesize;
         this.worldmap = new Array(this.width);
         for (let x = 0; x < this.width; x++){
-            this.worldmap[x] = new Array(this.width);
+            this.worldmap[x] = new Array(this.height);
         }
         this.createCellularMap();
+        // this.createRandomMap();
     }
 
     createCellularMap(){
@@ -17,7 +18,7 @@ class World {
         map.randomize(0.5);
         var userCallback = (x,y,value) => {
             if (x === 0 || y === 0 || x === this.width -1 || y === this.height -1){
-                this.world[x][y]=1; // this creates walls around the edges of the map
+                this.worldmap[x][y]=1; // this creates walls around the edges of the map
                 return;
             }
             this.worldmap[x][y] = (value === 0) ? 1 : 0; 
@@ -25,6 +26,14 @@ class World {
         map.create(userCallback);
         map.connect(userCallback, 1);
     }
+
+    // createRandomMap() {
+    //     for (let x=0; x < this.width; x++) {
+    //         for (let y=0; y < this.height; y++){
+    //             this.worldmap[x][y] = Math.round(Math.random());
+    //         }
+    //     }
+    // }
 
     draw(context) {
         for (let x=0; x < this.width; x++) {
@@ -35,7 +44,7 @@ class World {
     }
 
     drawWall(context, x, y) {
-        context.fillStyle = '#001';
+        context.fillStyle = '#000';
         context.fillRect(
             x * this.tilesize,
             y * this.tilesize,

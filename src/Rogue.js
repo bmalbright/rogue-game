@@ -6,7 +6,7 @@ import World from './World';
 const Rogue = ({width, height, tilesize}) => {
     const canvasRef = useRef();
     const [player, setPlayer] = useState(new Player(1, 2, tilesize));
-    const[world, setWorld] = useState( new World(width, height, tilesize));
+    const [world, setWorld] = useState(new World(width, height, tilesize));
     let inputManager = new InputManager();
     const handleInput = (action, data) => {
         console.log(`handle input: ${action}:${JSON.stringify(data)}`);
@@ -28,10 +28,10 @@ useEffect(() => {
 
     useEffect(() => {
         console.log('Draw to canvas');
-        const context = canvasRef.current.getContext('2d');
-        context.clearRect(0,0, width * tilesize, height * tilesize);
-        world.draw(context);
-        player.draw(context);
+        const ctx = canvasRef.current.getContext('2d');
+        ctx.clearRect(0,0, width * tilesize, height * tilesize);
+        world.draw(ctx);
+        player.draw(ctx);
     });
     return(
     <canvas 
