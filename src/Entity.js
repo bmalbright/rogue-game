@@ -1,9 +1,13 @@
 class Entity {
-    constructor(x, y, sixe, attributes){
+    constructor(x, y, size, attributes){
         this.x = x;
         this.y = y;
         this.size = size;
         this.attributes = { ...attributes};
+    }
+
+    action(verb, world) {
+        console.log(`Verb: ${verb}`);
     }
 
     draw(context) {
