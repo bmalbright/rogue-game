@@ -52,7 +52,7 @@ useEffect(() => {
         ref={canvasRef}
         width={width * tilesize}
         height={height * tilesize}
-        style={{ border: '1px solid black', background: 'LightGreen' }}
+        style={{ border: '1px solid black', background: 'pink' }}
         ></canvas>
         <ul>
             {world.player.intentory.map((item, index) => (
