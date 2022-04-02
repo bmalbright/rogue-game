@@ -25,6 +25,7 @@ useEffect(() =>{
     newWorld.moveToSpace(world.player);
     let spawner = new Spawner(newWorld);
     spawner.spawnLoot(10);
+    spawner.spawnMonsters(7);
     setWorld(newWorld);
     // eslint-disable-next-line react-hooks/exhaustive-deps
 },[]);
@@ -56,6 +57,12 @@ useEffect(() => {
         <ul>
             {world.player.intentory.map((item, index) => (
                 <li key={index}>{item.attributes.name}</li>
+                ))}
+        </ul>
+
+        <ul>
+            {world.history.map((item, index) => (
+                <li key={index}>{item}</li>
                 ))}
         </ul>
         </>
