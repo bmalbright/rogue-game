@@ -5,16 +5,16 @@ import Stairs from './Stairs';
 const lootTable = [
     {name: 'Long Sword', color: 'darkgrey', ascii: '/', offset: {x: 6, y: 3}},
     {name: 'Health Potions', color: 'red', ascii: '!', offset: {x: 6, y: 3}},
-    {name: 'Gold Coins', color: 'yellow', ascii: '$', offset: {x: 3, y: 3}},
+    {name: 'Gold Coins', color: 'gold', ascii: '$', offset: {x: 3, y: 3}},
     {name: 'Light Armor', color: 'lightgrey', ascii: '#', offset: {x: 4, y: 3}},
 ]
 
 const monsterTable = [
     {name: 'Ogre', color: 'orange', ascii: 'O', offset: {x: 2, y: 3}, health: 7},
-    {name: 'Goblin', color: 'brown', ascii: 'G', offset: {x: 1, y: 2}, health: 3},
-    {name: 'Dragon', color: 'brightred', ascii: 'D', offset: {x: 4, y: 3}, health: 10},
-    {name: 'Serpent', color: 'black', ascii: 'S', offset: {x: 2, y: 2}, health: 2},
-    {name: 'Wraith', color: 'royalblue', ascii: 'W', offset: {x: 3, y: 2}, health: 8},
+    {name: 'Goblin', color: 'green', ascii: 'G', offset: {x: 1, y: 2}, health: 3},
+    {name: 'Dragon', color: 'darkred', ascii: 'D', offset: {x: 4, y: 3}, health: 10},
+    {name: 'Serpent', color: 'silver', ascii: 'S', offset: {x: 2, y: 2}, health: 2},
+    {name: 'Wraith', color: 'white', ascii: 'W', offset: {x: 3, y: 2}, health: 8},
 ]
 
 class Spawner {

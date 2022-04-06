@@ -4,7 +4,7 @@ import Spawner from "./Spawner";
 class Stairs extends Entity {
   attributes = {
     name: "Stairs",
-    color: "",
+    color: "pink",
     ascii: "Z",
     offset: { x: 2, y: 2 },
   };

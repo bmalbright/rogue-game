@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useState } from 'react';
 import InputManager from './InputManager';
-import Player from './Player';
+// import Player from './Player';
 import Spawner from './Spawner';
 import World from './World';
 
@@ -52,7 +52,7 @@ useEffect(() => {
         ref={canvasRef}
         width={width * tilesize}
         height={height * tilesize}
-        style={{ border: '1px solid black', background: 'pink' }}
+        style={{ border: '1px solid black', background: 'limegreen' }}
         ></canvas>
         <ul>
             {world.player.intentory.map((item, index) => (
